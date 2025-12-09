@@ -1,0 +1,13 @@
+{
+  "rules": [
+    "Avoid empty catch blocks — handle exceptions properly.",
+    "Avoid hardcoded passwords, tokens, or URLs.",
+    "Methods should not exceed 50 lines.",
+    "Classes must have a clear single responsibility.",
+    "Use constructor injection instead of field injection.",
+    "No direct database calls from controllers.",
+    "Avoid using raw types (List, Map without generics).",
+    "Use Optional instead of return null.",
+    "Avoid deeply nested if/else blocks."
+  ]
+}
