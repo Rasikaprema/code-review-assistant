@@ -15,4 +15,4 @@ RUN apt-get update && apt-get install -y maven
 RUN mvn -q clean package -DskipTests
 
 # Run the JAR
-CMD ["java", "-jar", "target/code-review-backend.jar"]
+CMD ["java", "-jar", "target/code-review-backend-1.0.0.jar"]
