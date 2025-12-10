@@ -1,16 +1,18 @@
-# Use OpenJDK 17 base image
-FROM openjdk:17-jdk-slim
+# Use Temurin JDK 17 (Render-friendly)
+FROM eclipse-temurin:17-jdk
 
 # Set working directory
 WORKDIR /app
 
-# Copy project
-COPY . .
+# Copy Maven wrapper and pom.xml first for caching
+COPY pom.xml .
 
-# Build using Maven
+# Copy the project source
+COPY src ./src
+
+# Install Maven + build the JAR
 RUN apt-get update && apt-get install -y maven
-RUN mvn -q -DskipTests package
+RUN mvn -q clean package -DskipTests
 
-# Run the Spring Boot app
+# Run the JAR
 CMD ["java", "-jar", "target/code-review-backend.jar"]
-
