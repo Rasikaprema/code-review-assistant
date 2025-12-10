@@ -16,7 +16,7 @@ st.set_page_config(
 # =====================================
 # 🔐 LOGIN SWITCH (TURN ON/OFF LOGIN)
 # =====================================
-ENABLE_LOGIN = False   # 👉 change to False to disable login completely
+ENABLE_LOGIN = True   # 👉 change to False to disable login completely
 
 # If login disabled → skip everything
 if not ENABLE_LOGIN:
