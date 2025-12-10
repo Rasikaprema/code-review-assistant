@@ -127,7 +127,7 @@ mode = st.radio(
     horizontal=True
 )
 
-backend_url = "http://localhost:8080/api/review"
+backend_url = "https://code-review-assistant-hehv.onrender.com/api/review"
 
 
 # =========================================================
