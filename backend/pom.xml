@@ -31,15 +31,16 @@
 
     <build>
         <plugins>
-            <!-- REQUIRED: This creates a runnable Spring Boot JAR -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
+
+                <!-- Ensures Maven creates an executable Spring Boot JAR -->
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal>   <!-- 🔥 IMPORTANT -->
+                            <goal>repackage</goal>  
                         </goals>
                     </execution>
                 </executions>
